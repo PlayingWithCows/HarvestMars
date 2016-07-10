@@ -1,0 +1,72 @@
+[{
+			"id": 0,
+			"title": "Uselessium hoe",
+			"itemtype": "tool",
+			"stackable": false,
+			"sellable": false,
+			"workspeed": 10,
+			"energycost": 10,
+			"value": 0,
+			"damage": 1,
+			"rarity": 1,
+			"slug": "hoe_starter"
+		}, {
+			"id": 1,
+			"title": "Better hoe",
+			"itemtype": "tool",
+			"stackable": false,
+			"sellable": false,
+			"workspeed": 8.5,
+			"energycost": 7,
+			"value": 0,
+			"damage": 1,
+			"rarity": 1,
+			"slug": "hoe_reward1"
+		}, {
+			"id": 2,
+			"title": "Uselessium axe",
+			"itemtype": "tool",
+			"stackable": false,
+			"sellable": false,
+			"workspeed": 8,
+			"energycost": 7,
+			"value": 0,
+			"damage": 1,
+			"rarity": 1,
+			"slug": "axe_starter"
+		}, {
+			"id": 3,
+			"title": "Orangeberry Bush Seed",
+			"itemtype": "seed",
+			"stackable": true,
+			"sellable": true,
+			"growtime": 5,
+			"multiharvest": true,
+			"multiharvestdelay": 2,
+			"value": 2,
+			"season": 1,
+			"rarity": 1,
+			"slug": "orangeberry_seed"
+		}, {
+			"id": 4,
+			"title": "Orangeberry",
+			"itemtype": "food",
+			"stackable": true,
+			"sellable": true,
+			"value": 5,
+			"healthrecovery": 10,
+			"energyrecovery": 10,
+			"rarity": 1,
+			"slug": "orangeberry_food"
+		}, {
+			"id": 5,
+			"title": "Apple",
+			"itemtype": "food",
+			"stackable": true,
+			"sellable": true,
+			"value": 2,
+			"healthrecovery": 5,
+			"energyrecovery": 5,
+			"rarity": 1,
+			"slug": "apple_food"
+}]

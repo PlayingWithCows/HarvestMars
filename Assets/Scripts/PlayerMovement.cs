@@ -23,13 +23,14 @@ public class PlayerMovement : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-
+		
 
 		if (!canvasManager.playerInventoryOpen) {
 			float forwardSpeed = Input.GetAxis ("Horizontal") * moveSpeed;
 			float sideSpeed = Input.GetAxis ("Vertical") * moveSpeed;
-
-			verticalVelocity += -gravity*Time.deltaTime;
+			if (!myController.isGrounded) {
+				verticalVelocity += -gravity * Time.deltaTime;
+			}
 			Vector3 speed = new Vector3 (forwardSpeed, verticalVelocity, sideSpeed);
 
 			speed = transform.rotation * speed;

@@ -8,6 +8,9 @@ public class PlayerMovement : MonoBehaviour {
 
 	public float moveSpeed;
 	public float gravity;
+	public float jumpSpeed;
+
+	float verticalVelocity=0;
 
 	private CanvasManager canvasManager;
 	void Start(){
@@ -26,11 +29,19 @@ public class PlayerMovement : MonoBehaviour {
 			float forwardSpeed = Input.GetAxis ("Horizontal") * moveSpeed;
 			float sideSpeed = Input.GetAxis ("Vertical") * moveSpeed;
 
-			Vector3 speed = new Vector3 (forwardSpeed, -gravity, sideSpeed);
+			verticalVelocity += -gravity*Time.deltaTime;
+			Vector3 speed = new Vector3 (forwardSpeed, verticalVelocity, sideSpeed);
 
 			speed = transform.rotation * speed;
 
 			myController.Move (speed * Time.deltaTime);
 		}
+	}
+
+	public void Jump(){
+	
+		if (myController.isGrounded)
+		verticalVelocity = jumpSpeed;
+	
 	}
 }

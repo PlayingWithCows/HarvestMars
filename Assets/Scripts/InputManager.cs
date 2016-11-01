@@ -5,13 +5,14 @@ public class InputManager : MonoBehaviour {
 
 	private Player player;
 	private CanvasManager canvasManager;
+	private PlayerMovement playerMovement;
 
 
 	// Use this for initialization
 	void Start () {
 		canvasManager = GameObject.Find ("CanvasManager").GetComponent<CanvasManager> ();
 		player = GameObject.Find ("Player").GetComponent<Player> ();
-
+		playerMovement = player.GetComponent<PlayerMovement> ();
 	}
 	
 	// Update is called once per frame
@@ -37,6 +38,9 @@ public class InputManager : MonoBehaviour {
 		}
 		if (Input.GetKeyDown ("b")) {
 			canvasManager.TogglePlayerInventory ();
+		}
+		if (Input.GetButtonDown ("Jump")) {
+			playerMovement.Jump();
 		}
 
 

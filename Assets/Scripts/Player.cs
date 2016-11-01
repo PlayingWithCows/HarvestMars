@@ -3,38 +3,20 @@ using System.Collections;
 using System;
 
 public class Player : MonoBehaviour {
-	public float useCooldown = 1f;
-	public float timeSinceLastUse = 0;
-//	private BulletHoles bulletHoles;
-	// Use this for initialization
+	
+	public Item heldItem;
+
 	void Start () {
-//		bulletHoles = GameObject.Find ("BulletHoles").GetComponent<BulletHoles> ();
+
 	}
 	
-	// Update is called once per frame
+
 	void Update () {
-		if (timeSinceLastUse <= useCooldown) {
-		
-			timeSinceLastUse += Time.deltaTime;
-		
-		}
 
 
 	}
 
 
-	public void UseThing(){
-
-		Ray ray = transform.GetComponentInChildren<Camera> ().ScreenPointToRay (new Vector3 (Screen.width / 2, Screen.height / 2,0));
-			RaycastHit hit;
-
-		if (Physics.Raycast (ray, out hit, 5)) {
-			if(hit.transform.CompareTag("usable")){
-			hit.transform.SendMessage ("UseByPlayer");
-				timeSinceLastUse = 0;
-			}
-		}
-	}
 
 //	public void FireWeapon (){
 //	

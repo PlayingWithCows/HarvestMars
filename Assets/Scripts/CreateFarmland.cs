@@ -22,9 +22,9 @@ public class CreateFarmland : MonoBehaviour {
 	// Update is called once per frame
 
 
-	void OnGUI () {
-		GUI.Box(new Rect( 100, 100, 200, 25 ), "index: "+surfaceIndex.ToString()+", name: "+terrainData.splatPrototypes[surfaceIndex].texture.name);
-	}
+//	void OnGUI () {
+//		GUI.Box(new Rect( 100, 100, 200, 25 ), "index: "+surfaceIndex.ToString()+", name: "+terrainData.splatPrototypes[surfaceIndex].texture.name);
+//	}
 
 	private float[] GetTextureMix(Vector3 WorldPos){
 		// returns an array containing the relative mix of textures

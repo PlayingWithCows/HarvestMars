@@ -23,6 +23,12 @@ public class CanvasManager : MonoBehaviour {
 		Cursor.lockState = CursorLockMode.Locked;
 	}
 
+	void Update(){
+		if (Input.GetKeyDown ("b")) {
+			TogglePlayerInventory ();
+		}
+	}
+
 	public void TogglePlayerInventory(){
 
 		if (!playerInventoryOpen) {
